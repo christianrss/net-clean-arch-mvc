@@ -1,5 +1,11 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
+  <ItemGroup>
+    <ProjectReference Include="..\NetCleanArchMvc.Domain\NetCleanArchMvc.Domain.csproj" />
+    <ProjectReference Include="..\NetCleanArchMvc.Application\NetCleanArchMvc.Application.csproj" />
+    <ProjectReference Include="..\NetCleanArchMvc.Infra.Data\NetCleanArchMvc.Infra.Data.csproj" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

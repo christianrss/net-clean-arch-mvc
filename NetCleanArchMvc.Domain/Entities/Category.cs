@@ -2,9 +2,8 @@ using NetCleanArchMvc.Domain.Validation;
 
 namespace NetCleanArchMvc.Domain.Entities;
 
-public sealed class Category
+public sealed class Category : Entity
 {
-    public int Id { get; private set; }
     public string Name { get; private set; }
 
     public Category(string name)
@@ -16,6 +15,11 @@ public sealed class Category
     {
         DomainExceptionValidation.When(id < 0, "Invalid Id value");
         Id = id;
+        ValidateDomain(name);
+    }
+
+    public void Update(string name)
+    {
         ValidateDomain(name);
     }
 

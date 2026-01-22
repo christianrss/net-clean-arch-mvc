@@ -1,4 +1,3 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using NetCleanArchMvc.Domain.Entities;
 using NetCleanArchMvc.Domain.Interfaces;

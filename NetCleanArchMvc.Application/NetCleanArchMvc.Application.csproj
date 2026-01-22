@@ -4,6 +4,17 @@
     <ProjectReference Include="..\NetCleanArchMvc.Domain\NetCleanArchMvc.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Interfaces\" />
+    <Folder Include="Mappings\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

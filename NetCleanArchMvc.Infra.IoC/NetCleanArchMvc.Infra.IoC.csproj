@@ -6,6 +6,10 @@
     <ProjectReference Include="..\NetCleanArchMvc.Infra.Data\NetCleanArchMvc.Infra.Data.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="16.0.0" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>

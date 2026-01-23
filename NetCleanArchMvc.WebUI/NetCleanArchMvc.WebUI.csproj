@@ -4,6 +4,10 @@
     <ProjectReference Include="..\NetCleanArchMvc.Infra.IoC\NetCleanArchMvc.Infra.IoC.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>

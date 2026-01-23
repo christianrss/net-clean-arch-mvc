@@ -1,7 +1,9 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using NetCleanArchMvc.Application.Interfaces;
+using NetCleanArchMvc.Application.Mappings;
+using NetCleanArchMvc.Application.Services;
 using NetCleanArchMvc.Domain.Interfaces;
 using NetCleanArchMvc.Infra.Data.Context;
 using NetCleanArchMvc.Infra.Data.Repositories;
@@ -21,6 +23,10 @@ public static class DependencyInjection
 
         services.AddScoped<ICategoryRepository, CategoryRepository>();
         services.AddScoped<IProductRepository, ProductRepository>();
+
+        services.AddScoped<IProductService, ProductService>();
+        services.AddScoped<ICategoryService, CategoryService>();
+        services.AddAutoMapper(cfg => {}, typeof(DomainToDTOMappingProfile).Assembly);
 
         return services;
     }

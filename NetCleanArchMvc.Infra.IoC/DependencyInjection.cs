@@ -28,6 +28,8 @@ public static class DependencyInjection
         services.AddScoped<ICategoryService, CategoryService>();
         services.AddAutoMapper(cfg => {}, typeof(DomainToDTOMappingProfile).Assembly);
 
+        services.AddMediatR(cfg => cfg.RegisterServicesFromAssembly(typeof(DomainToDTOMappingProfile).Assembly));
+
         return services;
     }
 }
